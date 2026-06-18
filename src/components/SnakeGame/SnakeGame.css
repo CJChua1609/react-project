@@ -1,0 +1,93 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 700px;   /* cap how big the game area gets */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.game-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -0.03em;
+    margin: 10px;
+    border-radius: 3px;
+    padding: 5px 30px;
+
+    /* Attaches the glowing breathing loop animation */
+    animation: neonPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        filter: drop-shadow(0 0 2px rgba(99, 102, 241, 0.2));
+    }
+    to {
+        filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.6));
+    }
+}
+
+.snake-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    padding: 24px 32px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.snake-overlay-text {
+    margin: 0;
+
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.snake-start-btn {
+    padding: 10px 22px;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.4);
+
+    transition: all 0.2s ease;
+}
+
+.snake-start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 114, 255, 0.6);
+}

@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 2rem 1rem;
+  background: var(--bg, #1a1714);
+  border-top: 1px solid var(--border, #57503f);
+  color: var(--text-dim, #9c9384);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+.footer__copy {
+  margin: 0;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__links a {
+  color: var(--text-dim, #9c9384);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--accent, #c98a4b);
+}
+
+.footer__links a:focus-visible {
+  outline: 2px solid var(--accent, #c98a4b);
+  outline-offset: 3px;
+}
