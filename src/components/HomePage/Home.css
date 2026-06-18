@@ -12,6 +12,7 @@
   min-height: 100%;
   width: 100%;
   font-family: 'Inter', system-ui, sans-serif;
+  margin-bottom: 100px;
 }
 
 /* Wraps the carousel + sits as the positioning context for the nav */
