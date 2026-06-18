@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
         <footer className="footer">
-            <p className="footer__copy">&copy; {year} Your Name. All rights reserved.</p>
+            <p className="footer__copy">&copy; {year} Chua Chi Jun. All rights reserved.</p>
 
             <div className="footer__links">
                 
@@ -24,7 +24,6 @@ function Footer() {
                 >
                 LinkedIn
                 </a>
-                <a href="chijun.chua@redalphacyber.com">Email</a>
             </div>
         </footer>
     </>
