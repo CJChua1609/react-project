@@ -7,24 +7,29 @@
 }
 
 .contact__box {
-  background: rgba(52, 48, 42, 0.75);
-  backdrop-filter: blur(12px);
+  background: rgba(224, 210, 164, 0.9);
 
-  border: 1px solid var(--border);
+  border: 1px solid rgba(201, 138, 75, 0.35);
   border-radius: 18px;
 
   padding: 2.5rem;
 
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.15),
     0 0 25px rgba(201, 138, 75, 0.15);
+
+  backdrop-filter: blur(8px);
+
+  color: #2b2117;
 }
 
 .contact__title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0.5rem;
+  color: #2b2117;
+}
+
+.contact__subtitle,
+.contact__field {
+  color: #6b5b46;
 }
 
 .contact__subtitle {
@@ -50,14 +55,16 @@
 
 .contact__field input,
 .contact__field textarea {
-  background: rgba(255, 255, 255, 0.04);
+ background: rgba(255, 255, 255, 0.7);
 
-  border: 1px solid var(--border);
+  border: 1px solid rgba(201, 138, 75, 0.25);
+
+  color: #978572fb;
   border-radius: 10px;
 
   padding: 0.9rem 1rem;
 
-  color: var(--text);
+
   font-size: 1rem;
   font-family: inherit;
 
@@ -79,8 +86,8 @@
   outline: none;
 
   border-color: var(--accent);
-
-  background: rgba(255, 255, 255, 0.06);
+  color: #1a1714c7;
+  background: rgba(255, 255, 255, 0.50);
 
   box-shadow:
     0 0 0 3px rgba(201, 138, 75, 0.15),
@@ -128,15 +135,14 @@
 }
 
 .contact__success {
-  background: rgba(201, 138, 75, 0.08);
-
+  background: rgba(255, 248, 236, 0.9);
   border: 1px solid rgba(201, 138, 75, 0.3);
+
+  color: #2b2117;
 
   border-radius: 12px;
 
   padding: 1rem 1.25rem;
-
-  color: var(--text);
 
   text-align: center;
 }
