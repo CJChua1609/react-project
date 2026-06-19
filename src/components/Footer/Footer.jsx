@@ -11,14 +11,14 @@ function Footer() {
 
             <div className="footer__links">
                 
-                <a href="https://github.com/CJChua1609"
+                <a href="https://github.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
                 GitHub
                 </a>
                 
-                <a href="https://linkedin.com/in/chi-jun"
+                <a href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
