@@ -23,6 +23,9 @@ export default function SnakeGame() {
     const [gameOver, setGameOver] = useState(false); // game over state
     const [started, setStarted] = useState(false);
     const [score, setScore] = useState(0);
+    const [highScore, setHighScore] = useState(() => {
+        return Number(localStorage.getItem("snakeHighScore")) || 0;
+    });
 
     const directionRef = useRef("RIGHT");
     const pendingDirectionRef = useRef("RIGHT");
@@ -83,6 +86,13 @@ export default function SnakeGame() {
         setScore(0);
         setStarted(true);
     };
+
+    useEffect(() => {
+        if (score > highScore) {
+            setHighScore(score);
+            localStorage.setItem("snakeHighScore", score);
+        }
+    }, [score, highScore]);
 
     // game loop
     const gameRef = useRef(null);
@@ -147,7 +157,7 @@ export default function SnakeGame() {
     return (
         <div className='game-container' style={{ textAlign: "center" }}>
             <h2 className='game-title'>🐍 Snake Game</h2>
-            <h3>Score: {score}</h3>
+            <h3>Score: {score} | High Score: {highScore}</h3>
             <div
                 style={{
                 width: GRID_SIZE * CELL_SIZE,
